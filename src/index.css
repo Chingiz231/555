@@ -1,0 +1,99 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply antialiased;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold tracking-tight;
+  }
+}
+
+@layer components {
+  .nav-link {
+    @apply relative text-[#1e40af] hover:text-[#22c55e] font-medium text-lg transition-colors duration-300;
+  }
+
+  .nav-link::after {
+    content: '';
+    @apply absolute left-0 bottom-[-4px] w-0 h-[2px] bg-[#22c55e] transition-all duration-300;
+  }
+
+  .nav-link:hover::after {
+    @apply w-full;
+  }
+
+  .nav-link.active {
+    @apply text-[#22c55e];
+  }
+
+  .nav-link.active::after {
+    @apply w-full;
+  }
+
+  .gradient-button {
+    @apply bg-gradient-to-r from-[#1e40af] to-[#22c55e] hover:from-[#22c55e] hover:to-[#1e40af] text-white font-bold py-3 px-6 rounded-lg flex items-center justify-center transition-all duration-500 transform hover:scale-105 shadow-lg;
+  }
+
+  .service-card {
+    @apply bg-white p-8 rounded-xl shadow-lg border-2 border-[#1e40af] transform transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:border-[#22c55e];
+  }
+
+  .icon-circle {
+    @apply bg-gradient-to-r from-[#1e40af] to-[#22c55e] text-white w-16 h-16 rounded-full flex items-center justify-center mb-6 transform transition-transform duration-300 hover:rotate-6;
+  }
+
+  .modal-overlay {
+    @apply fixed inset-0 bg-black bg-opacity-75 backdrop-blur-sm z-50;
+  }
+
+  .modal-content {
+    @apply fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[95%] md:w-full max-w-2xl max-h-[90vh] overflow-y-auto bg-gradient-to-br from-[#1e40af] to-[#22c55e] p-6 rounded-lg shadow-2xl z-50;
+  }
+
+  .calculator-input {
+    @apply w-full px-4 py-3 bg-white/90 rounded-lg focus:outline-none focus:ring-2 focus:ring-white focus:bg-white text-base;
+  }
+
+  .calculator-label {
+    @apply block text-white mb-2 font-medium text-base;
+  }
+
+  .testimonial-card {
+    @apply bg-white p-8 rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300;
+  }
+
+  .feature-section {
+    @apply py-16 md:py-24;
+  }
+
+  .section-title {
+    @apply text-3xl md:text-4xl font-bold text-center text-[#1e40af] mb-12;
+  }
+}
+
+/* Custom scrollbar for modal */
+.modal-content::-webkit-scrollbar {
+  width: 8px;
+}
+
+.modal-content::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+}
+
+.modal-content::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+}
+
+.modal-content::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.5);
+}

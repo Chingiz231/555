@@ -1,0 +1,15 @@
+<svg width="1200" height="300" viewBox="0 0 1200 300" xmlns="http://www.w3.org/2000/svg">
+  <g transform="translate(0, 50)">
+    <!-- Wing element -->
+    <path d="M50 50 L200 50 L200 150 L50 150 Z" fill="#1e3a8a"/>
+    <path d="M70 70 L180 70 L180 90 L70 90 Z" fill="#22c55e"/>
+    <path d="M70 100 L160 100 L160 120 L70 120 Z" fill="#22c55e"/>
+    <path d="M70 130 L140 130 L140 150 L70 150 Z" fill="#22c55e"/>
+    
+    <!-- Text -->
+    <text x="250" y="120" font-family="Arial Black" font-size="120" font-weight="bold">
+      <tspan fill="#22c55e">ABK</tspan>
+      <tspan fill="#1e3a8a">TRANS</tspan>
+    </text>
+  </g>
+</svg>
